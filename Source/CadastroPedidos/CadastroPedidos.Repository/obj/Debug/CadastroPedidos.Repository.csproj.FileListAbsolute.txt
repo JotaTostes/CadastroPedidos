@@ -1,0 +1,8 @@
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\bin\Debug\CadastroPedidos.Repository.dll
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\bin\Debug\CadastroPedidos.Repository.pdb
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\bin\Debug\CadastroPedidos.Core.dll
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\bin\Debug\CadastroPedidos.Core.pdb
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\obj\Debug\CadastroPedidos.Repository.csprojResolveAssemblyReference.cache
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\obj\Debug\CadastroPedidos.Repository.csproj.CoreCompileInputs.cache
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\obj\Debug\CadastroPedidos.Repository.dll
+C:\Users\João\Desktop\Cadastro_Pedidos\Source\CadastroPedidos\CadastroPedidos.Repository\obj\Debug\CadastroPedidos.Repository.pdb
