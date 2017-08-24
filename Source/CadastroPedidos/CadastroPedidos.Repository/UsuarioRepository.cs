@@ -39,7 +39,7 @@ namespace CadastroPedidos.Repository
             ExecuteProcedure(Procedures.GKSSP_SelUsuaSenha);
             AddParameter("Email", email);
             AddParameter("Senha", senha);
-            var retornobd = ExecuteReader();
+            using (var retornobd = ExecuteReader())
             return retornobd.Read();
         }
 
@@ -49,7 +49,5 @@ namespace CadastroPedidos.Repository
             AddParameter("Num_ChaveUsua", numchaveusua);
             ExecuteNonQuery();
         }
-
-
     }
 }

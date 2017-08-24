@@ -11,11 +11,13 @@ namespace CadastroPedidos.WebAPI.Controllers
     {
         private readonly Notification _notification;
         private readonly IUsuarioService _usuarioService;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public UsuarioController(Notification notification, IUsuarioService usuarioService)
+        public UsuarioController(Notification notification, IUsuarioService usuarioService, IUsuarioRepository usuarioRepository)
         {
             _notification = notification;
             _usuarioService = usuarioService;
+            _usuarioRepository = usuarioRepository;
         }
 
         public IHttpActionResult Post(UsuarioDto usuario)
@@ -27,5 +29,22 @@ namespace CadastroPedidos.WebAPI.Controllers
             return Ok();
         }
 
+        public IHttpActionResult GetVerificaEmailCadastrado(string email)
+        {
+            _usuarioRepository.VerificaEmailCadastrado(email);
+            return Ok();
+        }
+
+        public IHttpActionResult GetVerificaEmailSenha(string email, string senha)
+        {
+            _usuarioRepository.VerificaEmailSenha(email, senha);
+            return Ok();
+        }
+
+        public IHttpActionResult GetValidaEmail(int numChaveUsua)
+        {
+            _usuarioRepository.ValidaEmail(numChaveUsua);
+            return Ok();
+        }
     }
 }

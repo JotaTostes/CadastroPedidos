@@ -21,8 +21,17 @@ namespace CadastroPedidos.Core.Services.Usuario
                 _notification.Add("Usuario ja está cadastrado!!");
                 return;
             }
-
             _usuarioRepository.InserirUsuario(usuario);
         }
+
+        public void GetVerificaEmailCadastrado(string email)
+        {
+            if (_usuarioRepository.VerificaEmailCadastrado(email))
+            {
+                _notification.Add("");
+            }
+        }
+
+        
     }
 }
