@@ -31,13 +31,17 @@ namespace CadastroPedidos.WebAPI.Controllers
 
         public IHttpActionResult GetVerificaEmailCadastrado(string email)
         {
-            _usuarioRepository.VerificaEmailCadastrado(email);
+            _usuarioService.GetVerificaEmailCadastrado(email);
+            if (_notification.HasNotification)
+                return BadRequest();
             return Ok();
         }
 
         public IHttpActionResult GetVerificaEmailSenha(string email, string senha)
         {
-            _usuarioRepository.VerificaEmailSenha(email, senha);
+            _usuarioService.GetVerificaEmailSenha(email, senha);
+            if (_notification.HasNotification)
+                return BadRequest();
             return Ok();
         }
 
