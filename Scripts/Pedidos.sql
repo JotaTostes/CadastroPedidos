@@ -57,4 +57,34 @@ CREATE PROCEDURE [dbo].[GKSSP_UpdPedido]
 			WHERE  Num_ChaveId = @Num_ChaveId
 	END
 GO
+
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[GKSSP_DelPedido]') AND objectproperty(id, N'IsPROCEDURE')=1)
+	DROP PROCEDURE [dbo].[GKSSP_DelPedido]
+GO
+
+CREATE PROCEDURE [dbo].[GKSSP_DelPedido]
+	@Num_ChaveId int
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: Pedidos.sql
+	Objetivo..........: Deletar pedidos
+	Autor.............: SMN - João Guilherme
+ 	Data..............: 28/08/2018
+	Ex................: EXEC [dbo].[GKSSP_DelPedido] 1014
+
+	*/
+
+	BEGIN
+		DELETE [dbo].[Pedidoes]
+		WHERE Num_ChaveIdPed = @Num_ChaveIdPed	
+	END
+GO
+
+
+			
+				
+
 				

@@ -25,7 +25,7 @@ namespace CadastroPedidos.Core.Services.Usuario
         public void GetVerificaEmailCadastrado(string email)
         {
             if (_usuarioRepository.VerificaEmailCadastrado(email))
-                _notification.Add("Usuario ja está cadastrado!!");
+                _notification.Add("Email ja está cadastrado!!");
         }
 
         public void GetVerificaEmailSenha(string email, string senha)
