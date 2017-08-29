@@ -33,7 +33,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[GKSSP_UpdP
 GO
 
 CREATE PROCEDURE [dbo].[GKSSP_UpdPedido]
-	@Num_ChaveId int,
+	@Num_ChaveIdPed int,
 	@DataPed datetime,
 	@Cliente varchar(40),
 	@Valor decimal(18,2)
@@ -54,7 +54,7 @@ CREATE PROCEDURE [dbo].[GKSSP_UpdPedido]
 			SET	DataPed = @DataPed,
 				Cliente = @Cliente,
 				Valor = @Valor
-			WHERE  Num_ChaveId = @Num_ChaveId
+			WHERE  Num_ChaveIdPed = @Num_ChaveIdPed
 	END
 GO
 
@@ -64,7 +64,7 @@ IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[GKSSP_DelP
 GO
 
 CREATE PROCEDURE [dbo].[GKSSP_DelPedido]
-	@Num_ChaveId int
+	@Num_ChaveIdPed int
 	AS
 
 	/*

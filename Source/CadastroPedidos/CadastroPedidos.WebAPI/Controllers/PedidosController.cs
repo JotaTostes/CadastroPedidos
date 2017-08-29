@@ -7,6 +7,11 @@ namespace CadastroPedidos.WebAPI.Controllers
     {
         private readonly IPedidoRepository _pedidoRepository;
 
+        public PedidosController(IPedidoRepository pedidoRepository)
+        {
+            _pedidoRepository = pedidoRepository;
+        }
+
         public IHttpActionResult Post(PedidoDto pedido)
         { 
             _pedidoRepository.InserirPedido(pedido);
@@ -16,6 +21,12 @@ namespace CadastroPedidos.WebAPI.Controllers
         public IHttpActionResult Delete(int numchaveidped)
         {
             _pedidoRepository.DeletaPedido(numchaveidped);
+            return Ok();
+        }
+
+        public IHttpActionResult GetEditaPedido(PedidoDto pedido)
+        {
+            _pedidoRepository.EditarPedido(pedido);
             return Ok();
         }
     }

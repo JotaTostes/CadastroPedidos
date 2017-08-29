@@ -1,5 +1,6 @@
 ﻿using CadastroPedidos.Core.Infra;
 using CadastroPedidos.Core.Services.Usuario;
+using CadastroPedidos.Core.Services.Usuario.Dto;
 using CadastroPedidos.Repository;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
@@ -15,6 +16,7 @@ namespace CadastroPedidos.WebAPI.App_Start
 
             container.Register<IUsuarioRepository, UsuarioRepository>();
             container.Register<IUsuarioService, UsuarioService>();
+            container.Register<IPedidoRepository,PedidosRepository>();
             container.Register<Notification>(Lifestyle.Scoped);
 
             container.Verify();
