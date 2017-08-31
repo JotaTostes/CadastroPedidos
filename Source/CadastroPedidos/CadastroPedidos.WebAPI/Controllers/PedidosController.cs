@@ -13,7 +13,7 @@ namespace CadastroPedidos.WebAPI.Controllers
         }
 
         public IHttpActionResult Post(PedidoDto pedido)
-        { 
+        {
             _pedidoRepository.InserirPedido(pedido);
             return Ok();
         }
@@ -23,8 +23,7 @@ namespace CadastroPedidos.WebAPI.Controllers
             _pedidoRepository.DeletaPedido(numchaveidped);
             return Ok();
         }
-
-        public IHttpActionResult GetEditaPedido(PedidoDto pedido)
+        public IHttpActionResult PutEditaPedido(PedidoDto pedido)
         {
             _pedidoRepository.EditarPedido(pedido);
             return Ok();

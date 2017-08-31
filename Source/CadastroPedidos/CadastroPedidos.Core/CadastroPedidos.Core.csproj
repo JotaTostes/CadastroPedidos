@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infra\Notification.cs" />
-    <Compile Include="Services\Usuario\Dto\IPedidoRepository.cs" />
-    <Compile Include="Services\Usuario\Dto\PedidoDto.cs" />
+    <Compile Include="Services\Pedidos\Dto\IPedidoRepository.cs" />
+    <Compile Include="Services\Pedidos\Dto\PedidoDto.cs" />
+    <Compile Include="Services\Produtos\Dto\IProdutosRepository.cs" />
+    <Compile Include="Services\Produtos\Dto\ProdutosDto.cs" />
     <Compile Include="Services\Usuario\Dto\UsuarioDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Usuario\IUsuarioRepository.cs" />

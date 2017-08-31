@@ -27,7 +27,6 @@ CREATE PROCEDURE [dbo].[GKSSP_InsPedido]
 GO
 
 
-
 IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[dbo].[GKSSP_UpdPedido]') AND objectproperty(id, N'IsPROCEDURE')=1)
 	DROP PROCEDURE [dbo].[GKSSP_UpdPedido]
 GO
@@ -82,9 +81,3 @@ CREATE PROCEDURE [dbo].[GKSSP_DelPedido]
 		WHERE Num_ChaveIdPed = @Num_ChaveIdPed	
 	END
 GO
-
-
-			
-				
-
-				

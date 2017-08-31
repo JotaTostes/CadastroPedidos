@@ -6,20 +6,15 @@ namespace CadastroPedidos.Repository
 {
     public class ConnectBD
     {
-
         //Cria o construtor pra que toda vez que o _connection for intanciado abrir a conexão com o banco 
         public ConnectBD()
         {
             _connection = Connect();
         }
-
         // Pega a minha connection string do webConfig
         private string _connectionString => ConfigurationManager.ConnectionStrings["DbContext"].ToString();
-
         private readonly SqlConnection _connection;
-
         private SqlCommand _command;
-
         /* Testa a conexão com o banco se ela estiver quebrada entao fecha e abre denovo e se a conexao
             estiver fechada abre ela*/
         private SqlConnection Connect()
@@ -45,19 +40,15 @@ namespace CadastroPedidos.Repository
                 CommandType = CommandType.StoredProcedure
             };
         }
-
-        
         public void AddParameter(string parameterName, object parameterValue)
         {
             _command.Parameters.AddWithValue(parameterName, parameterValue);
         }
-
         // Método para executar procedure que não tem nenhum retorno (Insert,Delete)
         public void ExecuteNonQuery()
         {
             _command.ExecuteNonQuery();
         }
-
         // Metodo exclusivo para procedure que retorna valores (Select)
         public SqlDataReader ExecuteReader()
         {

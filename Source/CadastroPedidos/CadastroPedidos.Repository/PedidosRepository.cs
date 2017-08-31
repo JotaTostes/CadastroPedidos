@@ -17,7 +17,6 @@ namespace CadastroPedidos.Repository
             AddParameter("DataPed", pedido.DataPed);
             AddParameter("Cliente", pedido.Cliente);
             AddParameter("Valor", pedido.Valor);
-
             ExecuteNonQuery();
         }
 
@@ -27,7 +26,7 @@ namespace CadastroPedidos.Repository
             AddParameter("DataPed",pedido.DataPed);
             AddParameter("Cliente",pedido.Cliente);
             AddParameter("Valor",pedido.Valor);
-
+            AddParameter("Num_ChaveIdPed",pedido.Num_ChaveIdPed);
             ExecuteNonQuery();
         }
 
@@ -35,7 +34,6 @@ namespace CadastroPedidos.Repository
         {
             ExecuteProcedure(Procedures.GKSSP_DelPedido);
             AddParameter("Num_ChaveIdPed",numchaveidped);
-
             ExecuteNonQuery();
         }
     }

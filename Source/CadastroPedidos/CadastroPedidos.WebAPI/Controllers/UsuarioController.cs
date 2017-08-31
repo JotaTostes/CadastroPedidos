@@ -25,7 +25,6 @@ namespace CadastroPedidos.WebAPI.Controllers
             _usuarioService.InserirUsuario(usuario);
             if (_notification.HasNotification)
                 return Content(HttpStatusCode.NotAcceptable, _notification.GetNotification);
-
             return Ok();
         }
 
